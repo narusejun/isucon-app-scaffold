@@ -1,5 +1,5 @@
 HOSTNAME:=$(shell hostname)
-BRANCH:=main
+BRANCH:=master
 
 all: build
 
