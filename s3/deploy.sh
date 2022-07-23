@@ -9,12 +9,12 @@ sudo cp -f env.sh /home/isucon/env.sh
 
 # アプリケーションのビルド
 #cd /home/isucon/webapp/go
-#go build -o isucondition
+#make
 
 # ミドルウェア・Appの再起動
 #sudo systemctl restart mariadb
 #sudo systemctl reload nginx
-#sudo systemctl restart isucondition.go
+#sudo systemctl restart isuxxxx
 
 # slow query logの有効化
 QUERY="
@@ -25,5 +25,5 @@ set global slow_query_log = ON;
 echo $QUERY | sudo mysql -uroot
 
 # log permission
-sudo chmod 777 /var/log/nginx /var/log/nginx/*
-sudo chmod 777 /var/log/mysql /var/log/mysql/*
+sudo chmod -R 777 /var/log/nginx
+sudo chmod -R 777 /var/log/mysql
