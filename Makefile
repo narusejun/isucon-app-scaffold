@@ -7,8 +7,8 @@ deploy: checkout start
 .PHONY: checkout
 checkout:
 	git fetch && \
-	git switch -C $(BRANCH) origin/$(BRANCH) && \
-	git reset --hard origin/$(BRANCH)
+	git reset --hard origin/$(BRANCH)  && \
+	git switch -C $(BRANCH) origin/$(BRANCH)
 
 .PHONY: start
 start:
